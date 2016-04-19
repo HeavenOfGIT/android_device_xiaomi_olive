@@ -139,7 +139,7 @@ TARGET_FS_CONFIG_GEN := device/xiaomi/olive/config.fs
 
 
 
-# Kernel
+
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8
@@ -267,6 +267,13 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/xiaomi/olive/recovery/root/etc/recovery.fstab
+
+
+
+# Peripheral manager
+TARGET_PER_MGR_ENABLED := true
+
+
 
 
 

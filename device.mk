@@ -95,6 +95,7 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 
 
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
@@ -329,6 +330,8 @@ PRODUCT_PACKAGES += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
+
+
 
 
 # Audio

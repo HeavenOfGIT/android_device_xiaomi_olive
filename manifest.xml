@@ -452,7 +452,20 @@
         <fqname>@2.1::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.qti.esepowermanager</name>
+=======
+        <name>vendor.lineage.trust</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUsbRestrict</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.data.factory</name>
+>>>>>>> 063c86e... msm8953-common: Build Trust HAL
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>

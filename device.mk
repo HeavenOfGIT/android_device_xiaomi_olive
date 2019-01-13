@@ -38,9 +38,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -326,6 +324,12 @@ PRODUCT_PACKAGES += \
 
 
     
+
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 
 # Audio
 PRODUCT_PACKAGES += \

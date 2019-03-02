@@ -19,9 +19,25 @@ PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
+
+
+
+#OMX
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxSwVencHevc \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthwfaa
 
 
 

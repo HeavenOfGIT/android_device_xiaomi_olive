@@ -173,6 +173,7 @@ TARGET_DISABLED_UBWC := true
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/dev/input/event3"
+TARGET_USES_INTERACTION_BOOST := true
 
 # Architecture
 TARGET_ARCH := arm64

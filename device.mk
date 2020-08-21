@@ -368,6 +368,7 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
         $(LOCAL_PATH)/audio/mixer_paths_sdm439_pm8953.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_sdm439_pm8953.xml
 
+
 # XML Audio configuration files
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
@@ -395,6 +396,13 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
+
+
+
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+
 
 # Net
 PRODUCT_PACKAGES += \

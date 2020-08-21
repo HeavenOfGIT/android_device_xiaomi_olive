@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2019 The LineageOS Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,11 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<!-- Camera app resources that may need to be customized
-     for different hardware or product builds. -->
 <resources>
-    <!-- Enable support for bokeh mode -->
-    <bool name="support_bokeh_mode">true</bool>
+    <bool name="call_recording_enabled">true</bool>
+    <integer name="call_recording_audio_source">4</integer>
 </resources>
-

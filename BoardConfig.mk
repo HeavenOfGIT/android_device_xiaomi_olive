@@ -197,10 +197,10 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_VERSION := 4.9
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/olive
-TARGET_KERNEL_CONFIG := olive-perf_defconfig
-TARGET_KERNEL_CLANG_COMPILE := true
-#TARGET_PREBUILT_KERNEL:= device/xiaomi/olive/kernel
+#TARGET_KERNEL_SOURCE := kernel/xiaomi/olive
+#TARGET_KERNEL_CONFIG := olive-perf_defconfig
+#TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_PREBUILT_KERNEL:= device/xiaomi/olive/kernel
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 
@@ -244,11 +244,10 @@ BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 
-# VNDK
-BOARD_VNDK_VERSION := current
+
+# Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-PRODUCT_FULL_TREBLE_OVERRIDE := true
-PRODUCT_EXTRA_VNDK_VERSIONS:= 28
+BOARD_VNDK_VERSION := current
 
 # Props
 TARGET_SYSTEM_PROP += device/xiaomi/olive/system.prop

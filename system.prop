@@ -1,3 +1,4 @@
+
 #
 # from device/xiaomi/olive/system.prop
 #
@@ -19,9 +20,9 @@ persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 #
-# Set network mode to (T/L/G/W/1X/EVDO, T/G/W/L) for 7+5 mode device on DSDS mode
+# Set network mode to (T/L/G/W/1X/EVDO, T/L/G/W/1X/EVDO) for 7+7 mode device on DSDS mode
 #
-ro.telephony.default_network=22,20
+ro.telephony.default_network=22,22
 
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=0
@@ -58,9 +59,6 @@ mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-
-#audio pareameter CE flag
-persist.audio.parameter.ce=0
 
 #minimum duration for offload playback in secs
 audio.offload.min.duration.secs=30
@@ -139,22 +137,14 @@ persist.hwc.enable_vds=1
 #selects CoreSight configuration to enable
 persist.debug.coresight.config=stm-events
 
-#property for vendor specific library
-ro.vendor.at_library=libqti-at.so
-ro.vendor.gt_library=libqti-gt.so
-
-#property for game detection feature
-vendor.debug.enable.gamed=0
+#selects Console configuration to enable
+persist.console.silent.config=1
 
 #property to enable narrow search range for video encoding
 vendor.vidc.enc.narrow.searchrange=1
 
 #property to enable fingerprint
 persist.qfp=false
-
-#min/max cpu in core control
-ro.vendor.qti.core_ctl_min_cpu=2
-ro.vendor.qti.core_ctl_max_cpu=4
 
 #HWUI properties
 ro.hwui.texture_cache_size=72
@@ -169,46 +159,17 @@ ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=2048
 
-#Enable B service adj transition by default
-ro.vendor.qti.sys.fw.bservice_enable=true
-ro.vendor.qti.sys.fw.bservice_limit=5
-ro.vendor.qti.sys.fw.bservice_age=5000
-
-#Trim properties
-ro.vendor.qti.sys.fw.use_trim_settings=true
-ro.vendor.qti.sys.fw.empty_app_percent=50
-ro.vendor.qti.sys.fw.trim_empty_percent=100
-ro.vendor.qti.sys.fw.trim_cache_percent=100
-ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
-
-# Enable Delay Service Restart
-ro.vendor.qti.am.reschedule_service=true
-
-#enable pickup gesture
-ro.vendor.sensors.pug = true
-
-# Create Swap disk, if below sys-prop enabled & also if device has lower (< 1 GB) RAM
-ro.vendor.qti.config.swap=true
-
-# Enable Fling Boost
-vendor.perf.gestureflingboost.enable=true
-
 # set cutoff voltage to 3200mV
 ro.cutoff_voltage_mv=3200
 
 # Added by pengyuzhe for Pseudo Gyro
 ro.vendor.sensors.pseudo_gyro=true
 
+#enable pickup gesture
+ro.vendor.sensors.pug = true
+
 #set device emmc size
 ro.emmc_size=16GB
-
-# Dirac config
-persist.dirac.acs.controller=gef
-persist.dirac.acs.storeSettings=1
-persist.dirac.gef.ext.did=0xA
-persist.dirac.gef.ext.mid=0x10012DE1
-persist.dirac.gef.int.did=0xE
-persist.dirac.gef.int.mid=0x10012DE0
 
 #force HAL1 for below packages
 vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk
@@ -222,10 +183,13 @@ persist.sys.thermal.config = 0
 
 #expose aux camera for below packages
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.qualcomm.qti.qmmi,com.huaqin.factory,com.westalgo.calibration
-#expose aux camera for below packages, add for factory camera test，add for xiaomi_dualcal_tool,add zyf,TASK SR-QL2115-01000000567
+#expose aux camera for below packages, add for factory camera test,add for xiaomi_dualcal_tool,add zyf,TASK SR-QL2115-01000000567
 vendor.camera.aux.packagelist1=com.huaqin.cameraautotest,com.xiaomi.cameratools,com.android.camera
 #expose aux camera for below packages, add for MiST camera test,
 vendor.camera.aux.packagelist2=com.mi.AutoTest
+#Whitelisting the below packages
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam
+persist.camera.privapp.list=org.codeaurora.snapcam
 
 #ADD BY ZHACHONG FOR CAMERA API2
 persist.sys.camera.camera2=true
@@ -250,21 +214,23 @@ persist.vendor.camera.expose.aux=1
 #add by yulifeng for HQ-43899
 persist.dpm.feature=0
 persist.cne.feature=1
+# add audio-sos
+ro.vendor.audio.sos=true
 
-# ro.location properties below are used in conjunction
-# with NLP_MODE setting in /vendor/etc/izat.conf
-# either as the main network provider or as a fallback
-# provider depending on NLP_MODE that is set
-# These properties are optional and will not cause
-# issues if not set to existing packages.
-# ro.location.osnlp.package sets the name of default
-# OS sepecific network location provider package to use
-# ro.location.osnlp.region.package is set to the name
-# of the alternative network location provider package
-# to be used for a particular region where the default
-# network location provider is not functional
-ro.location.osnlp.package=com.google.android.gms
-ro.location.osnlp.region.package=
+#audio pareameter CE flag
+persist.audio.parameter.ce=0
+
+#disable ctm for type-c usb
+persist.vendor.ctm.disallowed=true
+
+#C3I bt mac addr modem nv support start
+persist.vendor.bluetooth.modem_nv_support=true
+#C3I bt mac addr modem nv support end
+
+# Close ABS for HQ-40533
+persist.bluetooth.disableabsvol=true
+#add tuning aec
+persist.vendor.camera.aec.sync=1
 #add by huangxiaoli for C3I-291
 persist.internalAntenna.enable=true
 # C3I-370 add by zhuhongjie,enable on C3IK
@@ -275,34 +241,32 @@ ro.colorpick_adjust=true
 ro.df.effect.conflict=1
 ro.qualcomm.svi=1
 ro.qcom.svi.sensortype=2
-config.svi.path=/system/etc/SVIConfig.xml
+config.svi.path=/vendor/etc/SVIConfig.xml
 config.svi.xml=1
 config.svi.xml.print=1
 #add by liulekang for displayfeature end
 
-#C3I bt mac addr modem nv support start
-persist.vendor.bluetooth.modem_nv_support=true
-#C3I bt mac addr modem nv support end
-
-# Close ABS for HQ-40533
-persist.bluetooth.disableabsvol=true
-
-# add audio-sos
-ro.vendor.audio.sos=true
-
-#add tuning aec
-persist.vendor.camera.aec.sync=1
+#adjust voice call volume steps
+ro.config.vc_call_vol_steps=11
 
 #add by HQ_fengsimin for HQ-48473
 persist.net.doxlat=1
 
-#IOP properties
-vendor.iop.enable_uxe=0
-vendor.iop.enable_prefetch_ofr=0
+#property for mtp boost optimization,use xiaomi boost scheme
+ro.mtp_boost.scheme=true
+
+# enable temp dds
+persist.vendor.radio.enable_temp_dds=true
+
+# enable b-services aging propagation
+ro.vendor.qti.sys.fw.bservice_enable=true
+
+# HQ-76646 【439升Q】封包前, double check SSR正确配置
+persist.vendor.ssr.restart_level=ALL_ENABLE
 
 #enable bg dexopt
 persist.bg.dexopt.enable=true
-
+# end of device/xiaomi/olive/system.prop
 #
 # from device/xiaomi/olive/additional.prop
 #

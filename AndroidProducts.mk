@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_olive.mk
+    $(LOCAL_DIR)/lineage_olive.mk
     
     
 COMMON_LUNCH_CHOICES:= \
-    aosp_olive-userdebug \
-    aosp_olive-eng    
+    lineage_olive-userdebug \
+    lineage_olive-eng    

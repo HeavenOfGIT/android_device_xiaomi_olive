@@ -219,6 +219,16 @@ PRODUCT_COPY_FILES += \
 
 
 
+
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.0.vendor
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti
+
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \

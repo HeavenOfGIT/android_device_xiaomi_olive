@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+
+
+
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
+
+
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 

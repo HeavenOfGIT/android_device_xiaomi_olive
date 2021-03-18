@@ -64,15 +64,25 @@ PRODUCT_BOOT_JARS += \
 
 
 
+
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
+
+
+
+
 
 #QTI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
+
+
+
+
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
@@ -92,7 +102,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
 
-
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
 
 
 # Fingerprint
@@ -295,35 +307,25 @@ PRODUCT_PACKAGES += \
 
     
 
-
-
-
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio.common@4.0 \
-    android.hardware.audio.common@4.0-util \
-    android.hardware.audio.common@4.0-util \
-    android.hardware.audio.effect@2.0-impl \
-    android.hardware.audio.effect@4.0 \
-    android.hardware.audio.effect@4.0-impl \
-    android.hardware.audio.effect@4.0-impl \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio@2.0-service \
-    android.hardware.audio@4.0 \
-    android.hardware.audio@4.0-impl \
-    android.hardware.audio@4.0-impl \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service \
     android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.primary.msm8937 \
     audio.r_submix.default \
     audio.usb.default \
+    libaudiopreprocessing \
+    libaudioroute \
     libaacwrapper \
     libaudio-resampler \
-    libaudioroute \
-    libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    tinymix
+    libqcompostprocbundle \
+    libvolumelistener \
+    libtinycompress
 
 
 

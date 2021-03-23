@@ -17,19 +17,6 @@
 
 
 
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/xiaomi/olive/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel 
-
-
-
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic

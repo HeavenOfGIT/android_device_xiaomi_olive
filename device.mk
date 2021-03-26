@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
+
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \

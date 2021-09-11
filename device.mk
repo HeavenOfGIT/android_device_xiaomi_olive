@@ -68,7 +68,14 @@ PRODUCT_BOOT_JARS += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    libstdc++.vendor \
     Snap
+
+PRODUCT_PACKAGES += \
+    libwa_dof
+
 
 
 

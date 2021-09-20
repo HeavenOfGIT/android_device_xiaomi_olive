@@ -158,6 +158,7 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/olive
 TARGET_KERNEL_CONFIG := olive_defconfig
 KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/clang/host/linux-x86/proton/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := arm-linux-gnueabi-
 TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_CLANG_COMPILE := true
 

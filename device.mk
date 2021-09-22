@@ -20,6 +20,9 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/Car
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
+# IMS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/ims/ims.apk:$(TARGET_COPY_OUT_SYSTEM)/priv-app/ims/ims.apk
 
 
 

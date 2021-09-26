@@ -17,9 +17,9 @@
 DEVICE_PATH := device/xiaomi/olive
 BOARD_VENDOR := xiaomi
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2020-01-01
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2021-08-01
 
 
 # Build
